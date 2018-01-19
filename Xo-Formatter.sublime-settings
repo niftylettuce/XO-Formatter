@@ -1,0 +1,51 @@
+{
+  // Simply using `node` without specifying a path sometimes doesn't work :(
+  // https://github.com/victorporof/Sublime-HTMLPrettify#oh-noez-command-not-found
+  // http://nodejs.org/#download
+  "node_path": {
+    "windows": "node.exe",
+    "linux": "/usr/bin/nodejs",
+    "osx": "/usr/local/bin/node"
+  },
+
+  // The location to search for a locally installed xo package.
+  // These are all relative paths to a project's directory.
+  // If this is not found, it will try to fallback to a global package
+  // (see 'xo_path' below)
+  "local_xo_path": {
+    "windows": "node_modules/.bin/xo",
+    "linux": "node_modules/.bin/xo",
+    "osx": "node_modules/.bin/xo"
+  },
+
+  // The location of the globally installed xo package to use as a fallback
+  "xo_path": {
+    "windows": "%APPDATA%/npm/node_modules/xo/bin/xo",
+    "linux": "/usr/bin/xo",
+    "osx": "/usr/local/bin/xo"
+  },
+
+  // Specify this path to an xo config file to override the default behavior.
+  // Passed to xo as --config. Read more here:
+  // http://xo.org/docs/user-guide/command-line-interface#c---config
+  // If an absolute path is provided, it will use as is.
+  // Else, it will look for the file in the root of the project directory.
+  // Failing either, it will skip the config file
+  "config_path": "",
+
+  // Automatically format when a file is saved.
+  "format_on_save": false,
+
+  // Only attempt to format files with whitelisted extensions on save.
+  // Leave empty to disable the check
+  "format_on_save_extensions": [
+    "js",
+    "jsx",
+    "es",
+    "es6",
+    "babel"
+  ],
+
+  // logs xo output messages to console when set to true
+  "debug": false
+}

@@ -1,0 +1,7 @@
+[{
+  "caption": "Xo Formatter",
+  "children": [{
+    "caption": "Format This File",
+    "command": "format_xo"
+  }]
+}]
